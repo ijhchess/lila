@@ -159,7 +159,7 @@ Thank you all, you rock!"""
           ).flatMap {
             case (day, variant) =>
               at(day, 19) map { date =>
-                Schedule(Monthly, Blitz, variant, std, date).plan
+                Schedule(Monthly, SuperBlitz, variant, std, date).plan
               }
           },
           List( // monthly bullet variant tournaments!
