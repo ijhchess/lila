@@ -163,13 +163,13 @@ Thank you all, you rock!"""
               }
           },
           List( // monthly bullet variant tournaments!
-            month.secondWeek.withDayOfWeek(MONDAY)    -> Chess960,
-            month.secondWeek.withDayOfWeek(TUESDAY)   -> Crazyhouse,
-            month.secondWeek.withDayOfWeek(WEDNESDAY) -> KingOfTheHill,
-            month.secondWeek.withDayOfWeek(THURSDAY)  -> RacingKings,
-            month.secondWeek.withDayOfWeek(FRIDAY)    -> Antichess,
-            month.secondWeek.withDayOfWeek(SATURDAY)  -> Atomic,
-            month.secondWeek.withDayOfWeek(SUNDAY)    -> Horde
+            month.secondWeekOf.withDayOfWeek(MONDAY)    -> Chess960,
+            month.secondWeekOf.withDayOfWeek(TUESDAY)   -> Crazyhouse,
+            month.secondWeekOf.withDayOfWeek(WEDNESDAY) -> KingOfTheHill,
+            month.secondWeekOf.withDayOfWeek(THURSDAY)  -> RacingKings,
+            month.secondWeekOf.withDayOfWeek(FRIDAY)    -> Antichess,
+            month.secondWeekOf.withDayOfWeek(SATURDAY)  -> Atomic,
+            month.secondWeekOf.withDayOfWeek(SUNDAY)    -> Horde
           ).flatMap {
             case (day, variant) =>
               at(day, 19) map { date =>
