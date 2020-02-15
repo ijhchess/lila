@@ -21,7 +21,7 @@ final private class TournamentScheduler(
   /* Month plan:
    * First week: Shield standard tournaments
    * Second week: Yearly tournament
-   * Third week: Shield varitn tournaments
+   * Third week: Shield variant tournaments
    * Last week: Monthly tournaments
    */
 
@@ -162,7 +162,7 @@ Thank you all, you rock!"""
                 Schedule(Monthly, SuperBlitz, variant, std, date).plan
               }
           },
-          List( // monthly bullet variant tournaments!
+          List( // monthly variant tournaments!
             month.secondWeek.withDayOfWeek(MONDAY)    -> Chess960,
             month.secondWeek.withDayOfWeek(TUESDAY)   -> Crazyhouse,
             month.secondWeek.withDayOfWeek(WEDNESDAY) -> KingOfTheHill,
@@ -173,7 +173,7 @@ Thank you all, you rock!"""
           ).flatMap {
             case (day, variant) =>
               at(day, 19) map { date =>
-                Schedule(Monthly, Bullet, variant, std, date).plan
+                Schedule(Monthly, SuperBlitz, variant, std, date).plan
               }
           },
           List( // shield tournaments!
