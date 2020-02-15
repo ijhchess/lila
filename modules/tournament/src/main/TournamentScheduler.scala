@@ -174,9 +174,6 @@ Thank you all, you rock!"""
             case (day, variant) =>
               at(day, 19) map { date =>
                 Schedule(Monthly, Bullet, variant, std, date).plan
-                 _.copy(
-                    name = s"${variant.name} Bullet",
-                    )
               }
           },
           List( // shield tournaments!
