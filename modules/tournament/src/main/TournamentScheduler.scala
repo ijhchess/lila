@@ -159,21 +159,7 @@ Thank you all, you rock!"""
           ).flatMap {
             case (day, variant) =>
               at(day, 19) map { date =>
-                Schedule(Monthly, SuperBlitz, variant, std, date).plan
-              }
-          },
-          List( // monthly bullet variant tournaments!
-            month.secondWeek.withDayOfWeek(MONDAY)    -> Chess960,
-            month.secondWeek.withDayOfWeek(TUESDAY)   -> Crazyhouse,
-            month.secondWeek.withDayOfWeek(WEDNESDAY) -> KingOfTheHill,
-            month.secondWeek.withDayOfWeek(THURSDAY)  -> RacingKings,
-            month.secondWeek.withDayOfWeek(FRIDAY)    -> Antichess,
-            month.secondWeek.withDayOfWeek(SATURDAY)  -> Atomic,
-            month.secondWeek.withDayOfWeek(SUNDAY)    -> Horde
-          ).flatMap {
-            case (day, variant) =>
-              at(day, 19) map { date =>
-                Schedule(Monthly, Bullet, variant, std, date).plan
+                Schedule(Monthly, Blitz, variant, std, date).plan
               }
           },
           List( // shield tournaments!
